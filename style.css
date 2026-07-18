@@ -193,15 +193,23 @@ tbody td:last-child {
   border: 1px solid #dde7f1;
   border-radius: 16px;
   padding: 4px 10px;
-  font-size: 0.86rem;
-  color: #445268;
   transition: 0.2s;
+}
+
+.ta-list a {
+  color: #445268;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 500;
 }
 
 .ta-list span:hover {
   background: #12355b;
-  color: white;
   border-color: #12355b;
+}
+
+.ta-list span:hover a {
+  color: white;
 }
 
 /* ===========================
@@ -214,7 +222,8 @@ a {
   font-weight: 600;
 }
 
-td a {
+.slides-table td a,
+.tests-table td a {
   display: inline-block;
   background: var(--primary);
   color: white;
@@ -223,7 +232,8 @@ td a {
   transition: 0.25s;
 }
 
-td a:hover {
+.slides-table td a:hover,
+.tests-table td a:hover {
   background: var(--accent);
   color: #222;
 }
@@ -277,6 +287,51 @@ td a:hover {
 }
 
 /* ===========================
+   Reference Books
+=========================== */
+
+.book-list{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.book-item{
+    padding:12px 16px;
+    border-left:4px solid var(--accent);
+    border-bottom:1px solid var(--border);
+}
+
+.book-item:last-child{
+    border-bottom:none;
+}
+
+.book-title{
+    display:block;
+    font-size:1rem;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:2px;
+}
+
+.book-author{
+    display:inline;
+    color:#374151;
+    font-weight:500;
+}
+
+.book-publisher{
+    display:inline;
+    color:var(--muted);
+    font-size:.92rem;
+}
+
+.book-publisher::before{
+    content:" • ";
+}
+
+
+/* ===========================
    Coming Soon
 =========================== */
 
@@ -326,6 +381,7 @@ footer {
 }
 
 .footer-content {
+  color:white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,8 +534,11 @@ footer a:hover {
   }
 
   .ta-list span {
-    font-size: 0.82rem;
     padding: 4px 8px;
+  }
+
+  .ta-list a {
+    font-size: 0.82rem;
   }
 
   th,
