@@ -1,399 +1,427 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width</span> initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width&lt;/span&gt; initial-scale=1.0" name="viewport" />
     <title>Programming and Data Structures</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
-
     <!-- Header -->
     <header class="hero">
         <div class="container hero-content">
             <div class="course-title">
                 <h1>Programming and Data Structures [CS10003]</h1>
             </div>
-
             <div class="semester">
                 <h2>Autumn 2026–2027</h2>
             </div>
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
         </div>
     </header>
-
+    <div class="overlay" id="overlay"></div>
     <main class="container">
-
-        <!-- Schedule -->
-        <section class="card">
-            <h2>Schedule</h2>
-
-            <div class="table-wrapper">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Section</th>
-                            <th>Classroom</th>
-                            <th>Instructor</th>
-                            <th>Teaching Assistants</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>NR111</td>
-                            <td><a href="https://cse.iitkgp.ac.in/~mainack/" target="_blank">Mainack Mondal</a></td>
-                            <td>
-                                <div class="ta-list">
-                                    <span><a href="mailto:kavin1925@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Kavin R V</a></span>
-                                    <span><a href="mailto:shivrajanand25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Shivraj Anand</a></span>
-                                    <span><a href="mailto:sandippal9825@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Sandip Pal</a></span>
-                                    <span><a href="mailto:gullollavamshinath9@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Gullolla Vamshinath</a></span>
-                                    <span><a href="mailto:kunal.kk@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Kunal Kingkar Das</a></span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>NR112</td>
-                            <td><a href="https://cse.iitkgp.ac.in/~pawang/" target="_blank">Pawan Goyal</a></td>
-                            <td>
-                                <div class="ta-list">
-                                    <span><a href="mailto:swagnikghosh.cse25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Swagnik Ghosh</a></span>
-                                    <span><a href="mailto:lalchandm200325@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Lalchand Mondal</a></span>
-                                    <span><a href="mailto:mridul.kumar.2625@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Mridul Kumar</a></span>
-                                    <span><a href="mailto:sarthak.cse22@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Sarthak Roy</a></span>
-                                    <span><a href="mailto:mishra.utkarsh25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Utkarsh Mishra</a></span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>NR211</td>
-                            <td><a href="https://cse.iitkgp.ac.in/~satrajit/" target="_blank">Satrajit Ghosh</a></td>
-                            <td>
-                                <div class="ta-list">
-                                    <span><a href="mailto:sohamk10@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Soham Gangadhar Kottawar</a></span>
-                                    <span><a href="mailto:aashirwad04@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Aashirwad Mishra</a></span>
-                                    <span><a href="mailto:kumrenitin25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Nitin Kumre</a></span>
-                                    <span><a href="mailto:mayash.nayak@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Mayash Nayak</a></span>
-                                    <span><a href="mailto:divyam.24@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Divyam Katiyar</a></span>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>4</td>
-                            <td>NR212</td>
-                            <td><a href="https://cse.iitkgp.ac.in/~sghosh/" target="_blank">Saptarshi Ghosh</a></td>
-                            <td>
-                                <div class="ta-list">
-                                    <span><a href="mailto:tanmoy.halder.cs25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Tanmoy Halder</a></span>
-                                    <span><a href="mailto:Anshgpt25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Ansh Gupta</a></span>
-                                    <span><a href="mailto:srikantamsai@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Srikantam Sai Srinivas</a></span>
-                                    <span><a href="mailto:nibedita2111.24@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Nibedita Dutta</a></span>
-                                    <span><a href="mailto:pallav25@kgpian.iitkgp.ac.in" title="✉ Email TA"
-                                            target="_blank">Pallav Agrawal</a></span>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="timing-box">
-                <div class="timing-row">
-                    <span class="label">Slot</span>
-                    <span class="value">B31, B32, B33</span>
-                </div>
-
-                <div class="timing-row">
-                    <span class="label">Monday</span>
-                    <span class="value">11:00 AM - 11:55 AM</span>
-                </div>
-
-                <div class="timing-row">
-                    <span class="label">Tuesday</span>
-                    <span class="value">08:00 AM - 09:55 AM</span>
-                </div>
-            </div>
-
-            <div class="marks-box">
-                <h3>Marks Distribution</h3>
-
-                <div class="marks-row">
-                    <span class="marks-component">End-semester Examination</span>
-                    <span class="marks-weight">50%</span>
-                </div>
-
-                <div class="marks-row">
-                    <span class="marks-component">Mid-semester Examination</span>
-                    <span class="marks-weight">30%</span>
-                </div>
-
-                <div class="marks-row">
-                    <span class="marks-component">Class Test 1</span>
-                    <span class="marks-weight">10%</span>
-                </div>
-
-                <div class="marks-row">
-                    <span class="marks-component">Class Test 2</span>
-                    <span class="marks-weight">10%</span>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Lecture Slides -->
-        <section class="card">
-            <h2>Lecture Slides</h2>
-
-            <div class="table-wrapper">
-                <table class="slides-table">
-                    <thead>
-                        <tr>
-                            <th>Topic</th>
-                            <th>Resources</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Introduction to programming and the C language</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Data types</span> expressions and operators</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Conditions and branching</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Loops and iteration</td>
-                            <td><a href=slides/materialNotFound.html">[Available Soon]</mailto:>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>One-dimensional arrays</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Introduction to functions</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Recursive functions</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Strings</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Pointers</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Two-dimensional arrays</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Searching</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Sorting</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Structures</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Linked List</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Stacks and queues</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>Number System Representation</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                        <tr>
-                            <td>File handling</td>
-                            <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Reference Books -->
-        <section class="card">
-            <h2>Reference Books</h2>
-
-            <div class="book-list">
-
-                <div class="book-item">
-                    <span class="book-title">The C Programming Language</span>
-                    <span class="book-author">Brian W. Kernighan and Dennis M. Ritchie</span>
-                    <span class="book-publisher">Prentice Hall of India</span>
-                </div>
-
-                <div class="book-item">
-                    <span class="book-title">Programming in ANSI C</span>
-                    <span class="book-author">E. Balaguruswamy</span>
-                    <span class="book-publisher">Tata McGraw-Hill</span>
-                </div>
-
-                <div class="book-item">
-                    <span class="book-title">Schaum's Outline of Programming with C</span>
-                    <span class="book-author">Byron Gottfried</span>
-                    <span class="book-publisher">McGraw-Hill</span>
-                </div>
-
-                <div class="book-item">
-                    <span class="book-title">Data Structures</span>
-                    <span class="book-author">Seymour Lipschutz</span>
-                    <span class="book-publisher">Schaum's Outlines Series, Tata McGraw-Hill</span>
-                </div>
-
-                <div class="book-item">
-                    <span class="book-title">Fundamentals of Data Structures in C</span>
-                    <span class="book-author">Ellis Horowitz, Sartaj Sahni and Susan Anderson-Freed</span>
-                    <span class="book-publisher">W. H. Freeman and Company</span>
-                </div>
-
-                <div class="book-item">
-                    <span class="book-title">How to Solve it by Computer</span>
-                    <span class="book-author">R. G. Dromey</span>
-                    <span class="book-publisher">Prentice Hall of India</span>
-                </div>
-
-            </div>
-        </section>
-        <!-- Tests -->
-        <section class="card">
-            <h2>Tests</h2>
+        <div class="layout">
+            <nav class="side-nav">
+                <h3>Course</h3><a class="active" href="#schedule">Schedule</a><a href="#class-timing">Class Timing</a><a
+                    href="#marks-distribution">Marks Distribution</a><a href="#slides">Course Materials</a><a
+                    href="#books">Reference Books</a><a href="#tests">Tests</a>
+            </nav>
+            <div class="content">
+                <!-- Schedule -->
+                <section class="card" id="schedule">
+                    <h2>Schedule</h2>
+                    <div class="table-wrapper">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Section</th>
+                                    <th>Classroom</th>
+                                    <th>Instructor</th>
+                                    <th>Teaching Assistants</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>NR111</td>
+                                    <td><a href="https://cse.iitkgp.ac.in/~mainack/" target="_blank">Mainack Mondal</a>
+                                    </td>
+                                    <td>
+                                        <div class="ta-list">
+                                            <span><a href="mailto:kavin1925@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Kavin R V</a></span>
+                                            <span><a href="mailto:shivrajanand25@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Shivraj Anand</a></span>
+                                            <span><a href="mailto:sandippal9825@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Sandip Pal</a></span>
+                                            <span><a href="mailto:gullollavamshinath9@kgpian.iitkgp.ac.in"
+                                                    target="_blank" title="✉ Email TA">Gullolla Vamshinath</a></span>
+                                            <span><a href="mailto:kunal.kk@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Kunal Kingkar Das</a></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>NR112</td>
+                                    <td><a href="https://cse.iitkgp.ac.in/~pawang/" target="_blank">Pawan Goyal</a></td>
+                                    <td>
+                                        <div class="ta-list">
+                                            <span><a href="mailto:swagnikghosh.cse25@kgpian.iitkgp.ac.in"
+                                                    target="_blank" title="✉ Email TA">Swagnik Ghosh</a></span>
+                                            <span><a href="mailto:lalchandm200325@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Lalchand Mondal</a></span>
+                                            <span><a href="mailto:mridul.kumar.2625@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Mridul Kumar</a></span>
+                                            <span><a href="mailto:sarthak.cse22@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Sarthak Roy</a></span>
+                                            <span><a href="mailto:mishra.utkarsh25@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Utkarsh Mishra</a></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>NR211</td>
+                                    <td><a href="https://cse.iitkgp.ac.in/~satrajit/" target="_blank">Satrajit Ghosh</a>
+                                    </td>
+                                    <td>
+                                        <div class="ta-list">
+                                            <span><a href="mailto:sohamk10@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Soham Gangadhar Kottawar</a></span>
+                                            <span><a href="mailto:aashirwad04@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Aashirwad Mishra</a></span>
+                                            <span><a href="mailto:kumrenitin25@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Nitin Kumre</a></span>
+                                            <span><a href="mailto:mayash.nayak@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Mayash Nayak</a></span>
+                                            <span><a href="mailto:divyam.24@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Divyam Katiyar</a></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>NR212</td>
+                                    <td><a href="https://cse.iitkgp.ac.in/~sghosh/" target="_blank">Saptarshi Ghosh</a>
+                                    </td>
+                                    <td>
+                                        <div class="ta-list">
+                                            <span><a href="mailto:tanmoy.halder.cs25@kgpian.iitkgp.ac.in"
+                                                    target="_blank" title="✉ Email TA">Tanmoy Halder</a></span>
+                                            <span><a href="mailto:Anshgpt25@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Ansh Gupta</a></span>
+                                            <span><a href="mailto:srikantamsai@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Srikantam Sai Srinivas</a></span>
+                                            <span><a href="mailto:nibedita2111.24@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Nibedita Dutta</a></span>
+                                            <span><a href="mailto:pallav25@kgpian.iitkgp.ac.in" target="_blank"
+                                                    title="✉ Email TA">Pallav Agrawal</a></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
 
-            <!-- <div class="coming-soon">
+                </section>
+                <section class="card" id="class-timing">
+                    <h2>Class Timing</h2>
+                    <div class="timing-box" id="class-timing">
+                        <div class="timing-row">
+                            <span class="label">Slot</span>
+                            <span class="value">B31, B32, B33</span>
+                        </div>
+                        <div class="timing-row">
+                            <span class="label">Monday</span>
+                            <span class="value">11:00 AM - 11:55 AM</span>
+                        </div>
+                        <div class="timing-row">
+                            <span class="label">Tuesday</span>
+                            <span class="value">08:00 AM - 09:55 AM</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="card" id="marks-distribution">
+                    <h2>Marks Distribution</h2>
+                    <div class="marks-box" id="marks-distribution">
+                        <h3>Marks Distribution</h3>
+                        <div class="marks-row">
+                            <span class="marks-component">End-semester Examination</span>
+                            <span class="marks-weight">50%</span>
+                        </div>
+                        <div class="marks-row">
+                            <span class="marks-component">Mid-semester Examination</span>
+                            <span class="marks-weight">30%</span>
+                        </div>
+                        <div class="marks-row">
+                            <span class="marks-component">Class Test 1</span>
+                            <span class="marks-weight">10%</span>
+                        </div>
+                        <div class="marks-row">
+                            <span class="marks-component">Class Test 2</span>
+                            <span class="marks-weight">10%</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- Lecture Slides -->
+                <section class="card" id="slides">
+                    <h2>Lecture Slides</h2>
+                    <div class="table-wrapper">
+                        <table class="slides-table">
+                            <thead>
+                                <tr>
+                                    <th>Topic</th>
+                                    <th>Resources</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Introduction to programming and the C language</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Data types expressions and operators</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Conditions and branching</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Loops and iteration</td>
+                                    <td><a href='slides/materialNotFound.html"'>[Available Soon]
+                                        </a></td>
+                                </tr>
+                                <tr>
+                                    <td>One-dimensional arrays</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Introduction to functions</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Recursive functions</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Strings</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Pointers</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Two-dimensional arrays</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Searching</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sorting</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Structures</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Linked List</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Stacks and queues</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Number System Representation</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                                <tr>
+                                    <td>File handling</td>
+                                    <td><a href="slides/materialNotFound.html">[Available Soon]</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <!-- Reference Books -->
+                <section class="card" id="books">
+                    <h2>Reference Books</h2>
+                    <div class="book-list">
+                        <div class="book-item">
+                            <span class="book-title">The C Programming Language</span>
+                            <span class="book-author">Brian W. Kernighan and Dennis M. Ritchie</span>
+                            <span class="book-publisher">Prentice Hall of India</span>
+                        </div>
+                        <div class="book-item">
+                            <span class="book-title">Programming in ANSI C</span>
+                            <span class="book-author">E. Balaguruswamy</span>
+                            <span class="book-publisher">Tata McGraw-Hill</span>
+                        </div>
+                        <div class="book-item">
+                            <span class="book-title">Schaum's Outline of Programming with C</span>
+                            <span class="book-author">Byron Gottfried</span>
+                            <span class="book-publisher">McGraw-Hill</span>
+                        </div>
+                        <div class="book-item">
+                            <span class="book-title">Data Structures</span>
+                            <span class="book-author">Seymour Lipschutz</span>
+                            <span class="book-publisher">Schaum's Outlines Series, Tata McGraw-Hill</span>
+                        </div>
+                        <div class="book-item">
+                            <span class="book-title">Fundamentals of Data Structures in C</span>
+                            <span class="book-author">Ellis Horowitz, Sartaj Sahni and Susan Anderson-Freed</span>
+                            <span class="book-publisher">W. H. Freeman and Company</span>
+                        </div>
+                        <div class="book-item">
+                            <span class="book-title">How to Solve it by Computer</span>
+                            <span class="book-author">R. G. Dromey</span>
+                            <span class="book-publisher">Prentice Hall of India</span>
+                        </div>
+                    </div>
+                </section>
+                <!-- Tests -->
+                <section class="card" id="tests">
+                    <h2>Tests</h2>
+                    <!-- <div class="coming-soon">
                 <h3>Coming Soon</h3>
                 <p>Prepare well. Test schedule and related resources will be announced here.</p>
             </div> -->
-
-
-            <div class="table-wrapper">
-                <table class="tests-table">
-                    <thead>
-                        <tr>
-                            <th>Assessment</th>
-                            <th>Date / Time</th>
-                            <th>Resources</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>Class Test 1</td>
-                            <td> <b>Wednesday, 2nd September 2026, 7-8 PM </b> (tentative)</td>
-                            <td>
-                                <!-- <div class="test-links">
+                    <div class="table-wrapper">
+                        <table class="tests-table">
+                            <thead>
+                                <tr>
+                                    <th>Assessment</th>
+                                    <th>Date / Time</th>
+                                    <th>Resources</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Class Test 1</td>
+                                    <td> <b>Wednesday, 2nd September 2026, 7-8 PM </b> (tentative)</td>
+                                    <td>
+                                        <!-- <div class="test-links">
                                     <a href="slides/ct1-seating.pdf">Seating Arrangement</a>
                                     <a href="slides/ct1-questions.pdf">Questions with Solutions</a>
                                 </div> -->
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Mid-Semester Test</td>
-                            <td>To be announced</td>
-                            <td>
-                                <!-- <div class="test-links">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mid-Semester Test</td>
+                                    <td>To be announced</td>
+                                    <td>
+                                        <!-- <div class="test-links">
                                     <a href="slides/midsem-questions.pdf">Questions with Solutions</a>
                                 </div> -->
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Class Test 2</td>
-                            <td><b>Thursday, 29 October 2026, 7-8 PM </b> (tentative)</td>
-                            <td>
-                                <!-- <div class="test-links">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Class Test 2</td>
+                                    <td><b>Thursday, 29 October 2026, 7-8 PM </b> (tentative)</td>
+                                    <td>
+                                        <!-- <div class="test-links">
                                     <a href="slides/ct2-seating.pdf">Seating Arrangement</a>
                                     <a href="slides/ct2-questions.pdf">Questions with Solutions</a>
                                 </div> -->
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>End-Semester Test</td>
-                            <td>To be announced</td>
-                            <td></td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>End-Semester Test</td>
+                                    <td>To be announced</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
             </div>
-
-        </section>
-
+        </div>
     </main>
-
     <!-- Footer -->
     <footer>
         <div class="container footer-content">
-            &copy; Programming and Data Structures (CS10003), Autumn 2026–2027, IIT Kharagpur.
+            © Programming and Data Structures (CS10003), Autumn 2026–2027, IIT Kharagpur.
         </div>
     </footer>
 
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        &#8679;
+    </button>
+    <script>
+        const links = [...document.querySelectorAll(".side-nav a")];
+
+        const menu = document.getElementById("menuToggle");
+
+        const nav = document.querySelector(".side-nav");
+
+        const overlay = document.getElementById("overlay");
+
+        menu.addEventListener("click", () => {
+            nav.classList.add("open");
+            overlay.classList.add("show");
+        });
+
+        overlay.addEventListener("click", closeMenu);
+
+        function closeMenu() {
+            nav.classList.remove("open");
+            overlay.classList.remove("show");
+        }
+
+        links.forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                links.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === "#" + entry.target.id
+                    );
+                });
+            });
+        }, {
+            rootMargin: "-35% 0px -55% 0px",
+            threshold: 0
+        });
+
+        document.querySelectorAll(
+            "#schedule,#class-timing,#marks-distribution,#slides,#books,#tests"
+        ).forEach(section => observer.observe(section));
+
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 </body>
 
 </html>
